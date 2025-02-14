@@ -32,8 +32,12 @@ dependencies {
 	// DB
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.postgresql:postgresql'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// docker
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 }
 
 tasks.named('test') {
