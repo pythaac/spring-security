@@ -1,7 +1,6 @@
 package com.spring.security.service;
 
 import com.spring.security.domain.User;
-import com.spring.security.dto.AddUserRequest;
 import com.spring.security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -13,10 +12,10 @@ public class UserService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public Long save(AddUserRequest addUserRequest) {
+    public Long save(String email, String password) {
         return userRepository.save(User.builder()
-                .email(addUserRequest.getEmail())
-                .password(bCryptPasswordEncoder.encode(addUserRequest.getPassword()))
+                .email(email)
+                .password(bCryptPasswordEncoder.encode(password))
                 .build()
         ).getId();
     }
