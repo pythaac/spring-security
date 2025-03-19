@@ -1,5 +1,5 @@
 # spring-security
-Exercising spring-security for authentication, authorization, and etc.
+Exercising spring-security (authentication, authorization, ...)
 
 ### Reference
 스프링 부트 3 백엔드 개발자 되기: 자바 편
